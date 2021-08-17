@@ -1,6 +1,9 @@
 Created by: Angelo Jacobo   
 Date: August 16,2021   
 
+[![image](https://user-images.githubusercontent.com/87559347/129681334-1939fffe-306e-4f97-b189-46efec2e8437.png)](https://youtu.be/YJ7wrXs70nQ)
+
+
 # Inside the src folder are:   
 * top_module.v -> Combines the camera_interface, sdram_interface, and vga_interface modules.   
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; key[1:0] for brightness control   
