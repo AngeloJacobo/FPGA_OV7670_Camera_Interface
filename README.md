@@ -5,16 +5,16 @@ Date: August 16,2021
 * top_module.v -> Combines the camera_interface, sdram_interface, and vga_interface modules.   
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; key[1:0] for brightness control   
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; key[3:2] for contrast control   
-* camera_interface.v -> Configures the register of OV7670 via SCCB protocol. Pixel data is  also retrieved from the  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;camera and then passed to asyn_fifo module  
-* sdram_interface.v -> Controls the logic sequence for storing the pixel data retrieved from the camera_interface module  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; and then sending it to the asyn_fifo connected to vga_interface module   
+* camera_interface.v -> Configures the register of OV7670 via SCCB protocol. Pixel data is  also retrieved from    
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;the camera and then passed to asyn_fifo module   
+* sdram_interface.v -> Controls the logic sequence for storing the pixel data retrieved from the camera_interface  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; module and then sending it to the asyn_fifo connected to vga_interface module   
 * vga_interface.v -> Passes the pixel data retrieved from sdram to the vga_core module 
-* asyn_fifo.v -> FIFO with separate clock domains for read and write. Solves the clock domain crossing issue(see image below)
-* i2c_top.v -> Bit-bang implementation of SCCB(which is very similar to i2c)
-* sdram_controller.v -> Controller for storing to and retrieving data from SDRAM. Optimized to a memory bandwidth of 316MB/s
-* vga_core.v -> VGA controller. Set at 640x480 @ 60fps
-* top_module.ucf -> Constraint file for top_module.v
+* asyn_fifo.v -> FIFO with separate clock domains for read and write. Solves the clock domain crossing issue(see image below)      
+* i2c_top.v -> Bit-bang implementation of SCCB(which is very similar to i2c)    
+* sdram_controller.v -> Controller for storing to and retrieving data from SDRAM. Optimized to a memory bandwidth of 316MB/s  
+* vga_core.v -> VGA controller. Set at 640x480 @ 60fps   
+* top_module.ucf -> Constraint file for top_module.v   
 
 # Logic Flow:
 ![Camera_Interface](https://user-images.githubusercontent.com/87559347/129671784-1be86eca-7cfa-4566-9a94-96a9e9015aa7.jpg)
