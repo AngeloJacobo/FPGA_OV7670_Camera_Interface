@@ -13,8 +13,8 @@ Date: August 16,2021
 * asyn_fifo.v -> FIFO with separate clock domains for read and write. Solves the clock domain crossing issue(see  
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; image below)        
 * i2c_top.v -> Bit-bang implementation of SCCB(which is very similar to i2c)     
-* sdram_controller.v -> Controller for storing to and retrieving data from SDRAM. Optimized to a memory bandwidth    
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; of 316MB/s     
+* sdram_controller.v -> Controller for storing to and retrieving data from SDRAM. Optimized to a memory     
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; bandwidth of 316MB/s     
 * vga_core.v -> VGA controller. Set at 640x480 @ 60fps     
 * top_module.ucf -> Constraint file for top_module.v     
 
