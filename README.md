@@ -9,14 +9,14 @@ Date: August 16,2021
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;the camera and then passed to asyn_fifo module   
 * sdram_interface.v -> Controls the logic sequence for storing the pixel data retrieved from the camera_interface  
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; module and then sending it to the asyn_fifo connected to vga_interface module   
-* vga_interface.v -> Passes the pixel data retrieved from sdram to the vga_core module 
-* asyn_fifo.v -> FIFO with separate clock domains for read and write. Solves the clock domain crossing issue(see
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; image below)      
-* i2c_top.v -> Bit-bang implementation of SCCB(which is very similar to i2c)    
-* sdram_controller.v -> Controller for storing to and retrieving data from SDRAM. Optimized to a memory bandwidth 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; of 316MB/s  
-* vga_core.v -> VGA controller. Set at 640x480 @ 60fps   
-* top_module.ucf -> Constraint file for top_module.v   
+* vga_interface.v -> Passes the pixel data retrieved from sdram to the vga_core module   
+* asyn_fifo.v -> FIFO with separate clock domains for read and write. Solves the clock domain crossing issue(see  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; image below)        
+* i2c_top.v -> Bit-bang implementation of SCCB(which is very similar to i2c)     
+* sdram_controller.v -> Controller for storing to and retrieving data from SDRAM. Optimized to a memory bandwidth    
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; of 316MB/s     
+* vga_core.v -> VGA controller. Set at 640x480 @ 60fps     
+* top_module.ucf -> Constraint file for top_module.v     
 
 # Logic Flow:
 ![Camera_Interface](https://user-images.githubusercontent.com/87559347/129671784-1be86eca-7cfa-4566-9a94-96a9e9015aa7.jpg)
