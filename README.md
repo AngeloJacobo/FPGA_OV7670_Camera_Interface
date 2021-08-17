@@ -10,9 +10,11 @@ Date: August 16,2021
 * sdram_interface.v -> Controls the logic sequence for storing the pixel data retrieved from the camera_interface  
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; module and then sending it to the asyn_fifo connected to vga_interface module   
 * vga_interface.v -> Passes the pixel data retrieved from sdram to the vga_core module 
-* asyn_fifo.v -> FIFO with separate clock domains for read and write. Solves the clock domain crossing issue(see image below)      
+* asyn_fifo.v -> FIFO with separate clock domains for read and write. Solves the clock domain crossing issue(see
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; image below)      
 * i2c_top.v -> Bit-bang implementation of SCCB(which is very similar to i2c)    
-* sdram_controller.v -> Controller for storing to and retrieving data from SDRAM. Optimized to a memory bandwidth of 316MB/s  
+* sdram_controller.v -> Controller for storing to and retrieving data from SDRAM. Optimized to a memory bandwidth 
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; of 316MB/s  
 * vga_core.v -> VGA controller. Set at 640x480 @ 60fps   
 * top_module.ucf -> Constraint file for top_module.v   
 
