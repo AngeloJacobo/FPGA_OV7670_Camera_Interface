@@ -20,7 +20,7 @@ Date: August 16,2021
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; bandwidth of 316MB/s     
 * vga_core.v -> VGA controller. Set at 640x480 @ 60fps     
 * top_module.ucf -> Constraint file for top_module.v       
-#### **NOTE: dcm_24MHz.v , dcm_25MHz.v , and dcm_165MHz.v are PLL instantiations specific to Xilinx. Replace these files(and also the instantiation of these PLLs on the source code) when implementing this design to other FPGAs.**   
+#### **NOTE: dcm_24MHz.v , dcm_25MHz.v , and dcm_165MHz.v are PLL instantiations specific to Xilinx. Replace these files(and also the instantiation of these PLLs on the source code) when implementing this design to other FPGAs.**    
 
 # Logic Flow:
 ![Camera_Interface](https://user-images.githubusercontent.com/87559347/129671784-1be86eca-7cfa-4566-9a94-96a9e9015aa7.jpg)
